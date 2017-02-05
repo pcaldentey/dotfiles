@@ -22,3 +22,9 @@
 [submodule ".vim/bundle/vim-trailing-whitespace"]
 	path = .vim/bundle/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace
+[submodule ".vim/bundle/phpcomplete.vim"]
+	path = .vim/bundle/phpcomplete.vim
+	url = git://github.com/shawncplus/phpcomplete.vim.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
