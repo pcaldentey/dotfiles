@@ -9,10 +9,14 @@ filetype indent on
 "
 "  General behavior
 "
-set nocompatible                " Use vim defaults
-let mapleader=","               " Use the comma as leader
-set nobackup                    " Do not backup files on overwrite
-set history=250 		" Sets how many lines of history VIM has to remember
+set nocompatible      " Use vim defaults
+let mapleader=","     " Use the comma as leader
+set nobackup          " Do not backup files on overwrite
+set history=250 		  " Sets how many lines of history VIM has to remember
+
+set noswapfile        " Disale swap files
+set nobackup   
+set nowb
 
 "
 "  Navigation & Viewport
@@ -21,13 +25,16 @@ set scrolloff=5       " at least 5 lines of context when moving cursor
 set sidescrolloff=5   " and 5 columns of context
 set hidden                          " Allow switch beetween modified buffers withouti saving
 set backspace=indent,eol,start      " Improve backspacing
-
+" Makes it change cwd to the file you're currently editing:
+" autocmd BufEnter * lcd %:p:h
+"
 "
 "  Syntax and files
 "
 syntax on
 au BufRead,BufNewFile *.pgsql set filetype=sql
 au BufRead,BufNewFile *.swig set filetype=sql
+au BufRead,BufNewFile *.krb set filetype=py
 au BufRead,BufNewFile *.twig set filetype=html
 au BufRead,BufNewFile *.pp setf puppet
 
@@ -53,10 +60,23 @@ set ff=unix
 "autocmd BufWritePre * :%s/\s\+$//e
 
 "
+"  Search Settings
+"
+set incsearch   "Find the next match as we type the search
+set hlsearch    "Hilight searches by default
+set viminfo='100,f1 "Save up to 100 marks, enable capital marks
+set ignorecase  "Usually I don't care about case when searching
+set smartcase   "Only ignore case when we type lower case when searching
+
+
+"
 "  Status line
 "
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] "format
 set laststatus=2 "status line position
+" Make vim use a bash-like tab completion instead of the default:
+set wildmode=longest:list
+
 
 "
 "  Mapping
