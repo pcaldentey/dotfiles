@@ -34,3 +34,9 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".vim/bundle/vim-php-namespace"]
+	path = .vim/bundle/vim-php-namespace
+	url = https://github.com/arnaud-lb/vim-php-namespace.git
+[submodule ".vim/bundle/php-getter-setter.vim"]
+	path = .vim/bundle/php-getter-setter.vim
+	url = https://github.com/docteurklein/php-getter-setter.vim.git
