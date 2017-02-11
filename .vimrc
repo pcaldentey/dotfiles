@@ -53,8 +53,10 @@ set expandtab 		"tab key (in insert mode) insert spaces instead of tab character
 autocmd FileType make setlocal noexpandtab       "To turn off expandtab for editing makefiles, put the following in your vimrc:
 set lbr " Linebreak on 500 characters
 set tw=500
-set ff=unix
+set ff=dos
+set noeol
 
+" autocmd FileType php setlocal noeol binary fileformat=dos
 "Automatically removing all trailing whitespace
 "One way to make sure to remove all trailing whitespace in a file is to set an autocmd in your .vimrc file. Every time the user issues a :w command, Vim will automatically remove all trailing whitespace before saving. Annoying
 "autocmd BufWritePre * :%s/\s\+$//e
