@@ -9,9 +9,9 @@ filetype indent on
 "
 "  General behavior
 "
-set nocompatible      " Use vim defaults
-let mapleader=","     " Use the comma as leader
-set nobackup          " Do not backup files on overwrite
+set nocompatible                " Use vim defaults
+let mapleader=","               " Use the comma as leader
+set nobackup                    " Do not backup files on overwrite
 set history=250 		  " Sets how many lines of history VIM has to remember
 
 set noswapfile        " Disale swap files
@@ -99,18 +99,18 @@ nnoremap <silent> <F7> :NERDTreeToggle<CR>
 
 " vim-gutentags
 let g:gutentags_cache_dir = './.git'
-let g:gutentags_exclude = ['cache']
+let g:gutentags_exclude = ['cache', 'Tests']
 
 " vim-gitgutter
 set updatetime=250
 " 	preview hunk changes with hp but closes the buffer of the changes when the input pointer leaves the changed hunk.
-au CursorMoved * if exists('*gitgutter#utility#is_active') && gitgutter#utility#is_active() |
-      \   if empty(gitgutter#hunk#current_hunk()) |
-      \     pclose |
-      \   else |
-      \     call gitgutter#preview_hunk() |
-      \   endif |
-      \ endif
+"au CursorMoved * if exists('*gitgutter#utility#is_active') && gitgutter#utility#is_active() |
+"      \   if empty(gitgutter#hunk#current_hunk()) |
+"      \     pclose |
+"      \   else |
+"      \     call gitgutter#preview_hunk() |
+"      \   endif |
+"      \ endif
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -128,10 +128,27 @@ let g:syntastic_json_checkers = ['jsonlint'] " Use JSON linter
 let g:ycm_key_invoke_completion = '<C-a>'
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsListSnippets="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+
+" vim-php-namespace
+"   add use statements
+function! IPhpInsertUse()
+  call PhpInsertUse()
+  call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+"   class or function names fully qualified
+function! IPhpExpandClass()
+   call PhpExpandClass()
+   call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
