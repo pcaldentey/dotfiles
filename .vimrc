@@ -100,8 +100,10 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> <F7> :NERDTreeToggle<CR>
 
 " vim-gutentags
+let g:gutentags_project_root=['.pablo']
+let g:gutentags_add_default_project_roots=0
 let g:gutentags_cache_dir = './.git'
-let g:gutentags_exclude = ['cache', 'Tests']
+let g:gutentags_exclude = ['cache', 'Tests', '*min.js']
 
 " vim-gitgutter
 set updatetime=250
