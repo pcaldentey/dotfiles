@@ -40,3 +40,6 @@
 [submodule ".vim/bundle/php-getter-setter.vim"]
 	path = .vim/bundle/php-getter-setter.vim
 	url = https://github.com/docteurklein/php-getter-setter.vim.git
+[submodule ".vim/bundle/vim-bufkill"]
+	path = .vim/bundle/vim-bufkill
+	url = https://github.com/qpkorr/vim-bufkill.git

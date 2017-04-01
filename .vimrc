@@ -15,7 +15,7 @@ set nobackup                    " Do not backup files on overwrite
 set history=250 		  " Sets how many lines of history VIM has to remember
 
 set noswapfile        " Disale swap files
-set nobackup   
+set nobackup
 set nowb
 
 "
@@ -97,7 +97,8 @@ set completeopt=longest,menuone
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 " nerdtree
-nnoremap <silent> <F7> :NERDTreeToggle<CR>
+nnoremap <silent> <F6> :NERDTreeToggle<CR>
+nnoremap <silent> <F7> :NERDTreeFind<CR>
 
 " vim-gutentags
 let g:gutentags_project_root=['.pablo']
