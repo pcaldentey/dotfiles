@@ -87,7 +87,7 @@ set wildmode=longest:list
 map <silent> <C-N> :silent noh<CR>
 
 "
-"  Plugins specific configuration or vim configuration to improve plugin " 
+"  Plugins specific configuration or vim configuration to improve plugin "
 "
 " phpcomplete just for php
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
