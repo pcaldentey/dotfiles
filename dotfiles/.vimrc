@@ -89,6 +89,10 @@ map <silent> <C-N> :silent noh<CR>
 "
 "  Plugins specific configuration or vim configuration to improve plugin "
 "
+"ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_root_markers = ['.pablo']
 " phpcomplete just for php
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 set completeopt=longest,menuone

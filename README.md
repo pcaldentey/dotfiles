@@ -41,4 +41,4 @@ Youcompleteme installation
 - vim-php-namespace (https://github.com/arnaud-lb/vim-php-namespace.git)
 - vim-snippets (https://github.com/honza/vim-snippets)
 - vim-trailing-whitespace (https://github.com/bronson/vim-trailing-whitespace)
-
+- ctrlp (https://github.com/ctrlpvim/ctrlp.vim)
