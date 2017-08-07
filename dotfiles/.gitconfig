@@ -28,4 +28,4 @@
 
 [core]
         editor = vim
-
+        filemode = true
