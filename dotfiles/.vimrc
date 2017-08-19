@@ -17,6 +17,7 @@ set history=250 		  " Sets how many lines of history VIM has to remember
 set noswapfile        " Disale swap files
 set nobackup
 set nowb
+set encoding=utf-8
 
 "
 "  Navigation & Viewport
@@ -38,6 +39,9 @@ au BufRead,BufNewFile *.krb set filetype=py
 au BufRead,BufNewFile *.twig set filetype=html
 au BufRead,BufNewFile *.pp setf puppet
 
+" proper PEP8 indentation
+au BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+
 "
 "  Tabs & Indentation
 "
@@ -50,15 +54,14 @@ set softtabstop=4 	" See 4 spaces per tab
 set tabstop=4		" A tab is 4 spaces
 set expandtab 		"tab key (in insert mode) insert spaces instead of tab characters
 
-autocmd FileType make setlocal noexpandtab       "To turn off expandtab for editing makefiles, put the following in your vimrc:
+autocmd FileType make setlocal noexpandtab       "To turn off expandtab for editing makefiles
 set lbr " Linebreak on 500 characters
 set tw=500
 set ff=dos
 set noeol
 
-" autocmd FileType php setlocal noeol binary fileformat=dos
 "Automatically removing all trailing whitespace
-"One way to make sure to remove all trailing whitespace in a file is to set an autocmd in your .vimrc file. Every time the user issues a :w command, Vim will automatically remove all trailing whitespace before saving. Annoying
+"Every time the user issues a :w command, Vim will automatically remove all trailing whitespace before saving. Annoying
 "autocmd BufWritePre * :%s/\s\+$//e
 
 "
@@ -89,7 +92,7 @@ map <silent> <C-N> :silent noh<CR>
 "
 "  Plugins specific configuration or vim configuration to improve plugin "
 "
-"ctrlp.vim
+" ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_root_markers = ['.pablo']
@@ -100,9 +103,17 @@ set completeopt=longest,menuone
 " vim-taglist
 nnoremap <silent> <F8> :TlistToggle<CR>
 
+
 " nerdtree
 nnoremap <silent> <F6> :NERDTreeToggle<CR>
 nnoremap <silent> <F7> :NERDTreeFind<CR>
+""" open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+""" open a NERDTree automatically when vim starts up
+" autocmd vimenter * NERDTree
+""" closing a buffer properly. nerdtree  buffer
+nnoremap <leader>q :bp<cr>:bd #<cr>
 
 " vim-gutentags
 let g:gutentags_project_root=['.pablo']
