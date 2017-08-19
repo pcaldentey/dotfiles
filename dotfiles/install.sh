@@ -11,7 +11,7 @@ if [ -f ~/.vimrc  ]; then
 fi
 echo "Installing new .vimrc file"
 
-folder=$(readlink -f ./.vimrc)
+folder=$(readlink -f ./vimrc)
 ln -s $folder ~/.vimrc
 
 if [ -f ~/.ctags  ]; then
@@ -20,7 +20,7 @@ if [ -f ~/.ctags  ]; then
 fi
 echo "Installing new .ctags file"
 
-folder=$(readlink -f ./.ctags)
+folder=$(readlink -f ./ctags)
 ln -s $folder ~/.ctags
 
 if [ -f ~/.gitignore_global  ]; then
@@ -28,7 +28,7 @@ if [ -f ~/.gitignore_global  ]; then
     echo "Moving old ~/.gitignore_global file to ~/.gitignore_global"
 fi
 
-folder=$(readlink -f ./.ctags)
+folder=$(readlink -f ./gitignore_global)
 ln -s $folder ~/.gitignore_global
 
 echo "Installing new .gitignore_global file"
@@ -39,7 +39,7 @@ if [ -f ~/.gitconfig  ]; then
     echo "Moving old ~/.gitconfig file to ~/gitconfig.old"
 fi
 echo "Installing new .gitconfig file"
-folder=$(readlink -f ./.gitconfig)
+folder=$(readlink -f ./gitconfig)
 ln -s $folder ~/.gitconfig
 echo -e "\e[1;31mUpdate name and email in your new .gitconfig file\e[0m";
 
