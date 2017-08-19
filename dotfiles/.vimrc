@@ -96,6 +96,7 @@ map <silent> <C-N> :silent noh<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_root_markers = ['.pablo']
+
 " phpcomplete just for php
 autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 set completeopt=longest,menuone
@@ -110,8 +111,6 @@ nnoremap <silent> <F7> :NERDTreeFind<CR>
 """ open a NERDTree automatically when vim starts up if no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-""" open a NERDTree automatically when vim starts up
-" autocmd vimenter * NERDTree
 """ closing a buffer properly. nerdtree  buffer
 nnoremap <leader>q :bp<cr>:bd #<cr>
 
