@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#  In stalling dotfile in HOME directory
+#  Installing dotfiles in HOME directory
 #
 
 echo -e "\e[1;34mInstalling dotfiles\e[0m";
@@ -29,7 +29,7 @@ if [ -f ~/.gitignore_global  ]; then
 fi
 
 folder=$(readlink -f ./.ctags)
-ln -s $folder ~/.ctags
+ln -s $folder ~/.gitignore_global
 
 echo "Installing new .gitignore_global file"
 echo -e "\e[1;31mRun git config --global core.excludesfile ~/.gitignore_global\e[0m";
