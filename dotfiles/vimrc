@@ -145,6 +145,7 @@ let g:syntastic_json_checkers = ['jsonlint'] " Use JSON linter
 
 " Youcompleteme
 let g:ycm_key_invoke_completion = '<C-a>'
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<c-j>"
