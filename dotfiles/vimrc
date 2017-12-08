@@ -33,6 +33,7 @@ set backspace=indent,eol,start      " Improve backspacing
 "  Syntax and files
 "
 syntax on
+let python_highlight_all=1
 au BufRead,BufNewFile *.pgsql set filetype=sql
 au BufRead,BufNewFile *.swig set filetype=sql
 au BufRead,BufNewFile *.krb set filetype=py
