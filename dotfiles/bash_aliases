@@ -1,4 +1,4 @@
 alias version='lsb_release -ri'
-alias grpe ='grep'
-alias mkae ='make'
+alias grpe='grep'
+alias mkae='make'
 
