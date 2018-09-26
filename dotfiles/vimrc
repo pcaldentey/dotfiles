@@ -105,8 +105,7 @@ set completeopt=longest,menuone
 " vim-taglist
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-
-" nerdtree 
+" nerdtree
 let NERDTreeIgnore = ['\.pyc$']
 nnoremap <silent> <F6> :NERDTreeToggle<CR>
 nnoremap <silent> <F7> :NERDTreeFind<CR>
@@ -119,7 +118,7 @@ nnoremap <leader>q :bp<cr>:bd #<cr>
 " vim-gutentags
 let g:gutentags_project_root=['.pablo']
 let g:gutentags_add_default_project_roots=0
-let g:gutentags_cache_dir = './.git'
+let g:gutentags_cache_dir = '/home/pcaldentey/bin/tags_cache'
 let g:gutentags_ctags_exclude = ['cache', 'Tests', '*min.js']
 
 " vim-gitgutter
@@ -144,6 +143,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_php_phpcs_post_args = "--standard=PSR2" " Use the PSR-2 standard for PHP Code Sniffer
 let g:syntastic_json_checkers = ['jsonlint'] " Use JSON linter
+let g:syntastic_python_checkers = ['flake8']
 
 " Youcompleteme
 let g:ycm_key_invoke_completion = '<C-a>'
