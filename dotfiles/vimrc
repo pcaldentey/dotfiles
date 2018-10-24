@@ -145,6 +145,9 @@ let g:syntastic_php_phpcs_post_args = "--standard=PSR2" " Use the PSR-2 standard
 let g:syntastic_json_checkers = ['jsonlint'] " Use JSON linter
 let g:syntastic_python_checkers = ['flake8']
 
+" Close syntastic window 
+map <silent> <C-B> :SyntasticReset<CR>
+
 " Youcompleteme
 let g:ycm_key_invoke_completion = '<C-a>'
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
