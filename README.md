@@ -33,7 +33,9 @@ Youcompleteme installation
 - php-getter-setter.vim (https://github.com/docteurklein/php-getter-setter.vim.git)
 - phpcomplete.vim (git://github.com/shawncplus/phpcomplete.vim.git)
 - syntastic (https://github.com/vim-syntastic/syntastic.git)
-            - flake8 syntax checker for python
+
+            - flake8 syntax checker for python (install flake8)
+            
 - taglist.vim (https://github.com/vim-scripts/taglist.vim)
 - ultisnips (https://github.com/SirVer/ultisnips.git)
 - vim-gitgutter (https://github.com/airblade/vim-gitgutter.git)
