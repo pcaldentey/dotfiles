@@ -1,3 +1,5 @@
 .pablo
 venv
 *.pyc
+*.pyo
+pc.properties.ini

@@ -106,7 +106,7 @@ set completeopt=longest,menuone
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 " nerdtree
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 nnoremap <silent> <F6> :NERDTreeToggle<CR>
 nnoremap <silent> <F7> :NERDTreeFind<CR>
 """ open a NERDTree automatically when vim starts up if no files were specified
