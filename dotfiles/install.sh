@@ -47,6 +47,15 @@ echo "Installing new .bash_commands file"
 folder=$(readlink -f ./bash_commands)
 ln -s $folder ~/.bash_commands
 
+if [ -f ~/.flake8  ]; then
+    mv ~/.flake8 ~/.flake8.old
+    echo "Moving old ~/.flake8 file to ~/flake8.old"
+fi
+echo "Installing new .flake8 file"
+folder=$(readlink -f ./flake8)
+ln -s $folder ~/.flake8
+
+
 if [ -f ~/.gitignore_global  ]; then
     mv ~/.gitignore_global ~/.gitignore_global.old
     echo "Moving old ~/.gitignore_global file to ~/.gitignore_global"

@@ -5,7 +5,7 @@ Repo with [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 ## Operations
 - add a submodule: ``` git submodule add http://repository_url ```
 - clone this repo and attached submodules: ``` git clone --recursive git@github.com:pcaldentey/dotfiles.git ```
-- update submodules  ```git submodule update --init```
+- update submodules  ```git submodule update --init``` or ```git submodule foreach git pull origin master```
 
 ## Installation
 
@@ -33,7 +33,7 @@ Youcompleteme installation
 - php-getter-setter.vim (https://github.com/docteurklein/php-getter-setter.vim.git)
 - phpcomplete.vim (git://github.com/shawncplus/phpcomplete.vim.git)
 - syntastic (https://github.com/vim-syntastic/syntastic.git)
-            - flake8 syntax checker for python
+  - flake8 syntax checker for python (install flake8)         
 - taglist.vim (https://github.com/vim-scripts/taglist.vim)
 - ultisnips (https://github.com/SirVer/ultisnips.git)
 - vim-gitgutter (https://github.com/airblade/vim-gitgutter.git)
