@@ -40,8 +40,8 @@ au BufRead,BufNewFile *.krb set filetype=py
 au BufRead,BufNewFile *.twig set filetype=html
 au BufRead,BufNewFile *.pp setf puppet
 
-" proper PEP8 indentation
-au BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+" proper PEP8 indentation (with longer lines 120 chars)
+au BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=119 expandtab autoindent fileformat=unix
 
 "
 "  Tabs & Indentation
@@ -57,7 +57,7 @@ set expandtab 		"tab key (in insert mode) insert spaces instead of tab character
 
 autocmd FileType make setlocal noexpandtab       "To turn off expandtab for editing makefiles
 set lbr " Linebreak on 500 characters
-set tw=500
+set tw=200
 set ff=dos
 set noeol
 
