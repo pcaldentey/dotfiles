@@ -83,6 +83,13 @@ set laststatus=2 "status line position
 " Make vim use a bash-like tab completion instead of the default:
 set wildmode=longest:list
 
+"
+"  Change colorscheme when calling vimdiff
+"
+if &diff
+    colorscheme industry
+endif
+
 
 "
 "  Mapping
