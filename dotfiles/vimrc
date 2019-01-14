@@ -15,7 +15,6 @@ set nobackup                    " Do not backup files on overwrite
 set history=250 		  " Sets how many lines of history VIM has to remember
 
 set noswapfile        " Disale swap files
-set nobackup
 set nowb
 set encoding=utf-8
 
@@ -24,7 +23,7 @@ set encoding=utf-8
 "
 set scrolloff=5       " at least 5 lines of context when moving cursor
 set sidescrolloff=5   " and 5 columns of context
-set hidden                          " Allow switch beetween modified buffers withouti saving
+set hidden                          " Allow switch beetween modified buffers without saving
 set backspace=indent,eol,start      " Improve backspacing
 " Makes it change cwd to the file you're currently editing:
 " autocmd BufEnter * lcd %:p:h
@@ -98,7 +97,7 @@ endif
 map <silent> <C-N> :silent noh<CR>
 
 "
-"  Plugins specific configuration or vim configuration to improve plugin "
+"  Plugins specific configuration or vim configuration to improve plugin
 "
 " ctrlp.vim
 let g:ctrlp_map = '<c-p>'
