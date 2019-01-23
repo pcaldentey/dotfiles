@@ -15,7 +15,6 @@ set nobackup                    " Do not backup files on overwrite
 set history=250 		  " Sets how many lines of history VIM has to remember
 
 set noswapfile        " Disale swap files
-set nobackup
 set nowb
 set encoding=utf-8
 
@@ -24,7 +23,7 @@ set encoding=utf-8
 "
 set scrolloff=5       " at least 5 lines of context when moving cursor
 set sidescrolloff=5   " and 5 columns of context
-set hidden                          " Allow switch beetween modified buffers withouti saving
+set hidden                          " Allow switch beetween modified buffers without saving
 set backspace=indent,eol,start      " Improve backspacing
 " Makes it change cwd to the file you're currently editing:
 " autocmd BufEnter * lcd %:p:h
@@ -40,8 +39,8 @@ au BufRead,BufNewFile *.krb set filetype=py
 au BufRead,BufNewFile *.twig set filetype=html
 au BufRead,BufNewFile *.pp setf puppet
 
-" proper PEP8 indentation
-au BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+" proper PEP8 indentation (with longer lines 120 chars)
+au BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=119 expandtab autoindent fileformat=unix
 
 "
 "  Tabs & Indentation
@@ -57,7 +56,7 @@ set expandtab 		"tab key (in insert mode) insert spaces instead of tab character
 
 autocmd FileType make setlocal noexpandtab       "To turn off expandtab for editing makefiles
 set lbr " Linebreak on 500 characters
-set tw=500
+set tw=200
 set ff=dos
 set noeol
 
@@ -83,6 +82,13 @@ set laststatus=2 "status line position
 " Make vim use a bash-like tab completion instead of the default:
 set wildmode=longest:list
 
+"
+"  Change colorscheme when calling vimdiff
+"
+if &diff
+    colorscheme industry
+endif
+
 
 "
 "  Mapping
@@ -91,7 +97,7 @@ set wildmode=longest:list
 map <silent> <C-N> :silent noh<CR>
 
 "
-"  Plugins specific configuration or vim configuration to improve plugin "
+"  Plugins specific configuration or vim configuration to improve plugin
 "
 " ctrlp.vim
 let g:ctrlp_map = '<c-p>'
@@ -105,9 +111,8 @@ set completeopt=longest,menuone
 " vim-taglist
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-
-" nerdtree 
-let NERDTreeIgnore = ['\.pyc$']
+" nerdtree
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 nnoremap <silent> <F6> :NERDTreeToggle<CR>
 nnoremap <silent> <F7> :NERDTreeFind<CR>
 """ open a NERDTree automatically when vim starts up if no files were specified
@@ -119,8 +124,8 @@ nnoremap <leader>q :bp<cr>:bd #<cr>
 " vim-gutentags
 let g:gutentags_project_root=['.pablo']
 let g:gutentags_add_default_project_roots=0
-let g:gutentags_cache_dir = './.git'
-let g:gutentags_exclude = ['cache', 'Tests', '*min.js']
+let g:gutentags_cache_dir = '/home/pcaldentey/bin/tags_cache'
+let g:gutentags_ctags_exclude = ['cache', 'Tests', '*min.js']
 
 " vim-gitgutter
 set updatetime=250
@@ -144,6 +149,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_php_phpcs_post_args = "--standard=PSR2" " Use the PSR-2 standard for PHP Code Sniffer
 let g:syntastic_json_checkers = ['jsonlint'] " Use JSON linter
+let g:syntastic_python_checkers = ['flake8']
+
+" Close syntastic window 
+map <silent> <C-B> :SyntasticReset<CR>
 
 " Youcompleteme
 let g:ycm_key_invoke_completion = '<C-a>'

@@ -1,0 +1,18 @@
+
+
+#Usage:
+#translate <phrase> <source-language> <output-language>
+#
+#Example:
+#translate hello en es
+#
+#See this for a list of language codes:
+#
+#http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+#translate(){ wget -qO- "http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&q=$1&langpair=$2|${3:-en}" | sed 's/.*"translatedText":"\([^"]*\)".*}/\1\n/'; }
+translate(){ curl -s -A "Mozilla" "http://translate.google.com/translate_a/t?client=t&text=$1&sl=$2&tl=$3pt&multires=1&ssel=0&tsel=0&sc=1" | awk -F'"' '{print $2}'; }
+
+
+
+#translate(){ curl -s -A "Mozilla" "https://translate.google.com/#es/$2/$1" ; }
