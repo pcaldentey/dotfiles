@@ -1,6 +1,7 @@
 # Basic options
 --recurse=yes
 --tag-relative=yes
+--python-kinds=-i
 --exclude=.svn
 --exclude=.git
 --exclude=log
