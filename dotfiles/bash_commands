@@ -16,3 +16,4 @@ translate(){ curl -s -A "Mozilla" "http://translate.google.com/translate_a/t?cli
 
 
 #translate(){ curl -s -A "Mozilla" "https://translate.google.com/#es/$2/$1" ; }
+mkcd() { mkdir -p "$@" && cd "$@"; }
