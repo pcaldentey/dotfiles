@@ -109,6 +109,7 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 set completeopt=longest,menuone
 
 " vim-taglist
+let Tlist_Use_Right_Window = 1
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 " nerdtree
