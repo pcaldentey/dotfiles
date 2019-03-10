@@ -6,7 +6,8 @@
 
 echo -e "\e[1;34mInstalling dotfiles\e[0m";
 if [ -f ~/.vimrc  ]; then
-    mv ~/.vimrc ~/.vimrc.old
+    cp ~/.vimrc ~/.vimrc.old
+    rm ~/.vimrc
     echo "Moving old ~/.vimrc file to ~/vimrc.old"
 fi
 echo "Installing new .vimrc file"
@@ -15,7 +16,8 @@ folder=$(readlink -f ./vimrc)
 ln -s $folder ~/.vimrc
 
 if [ -f ~/.ctags  ]; then
-    mv ~/.ctags ~/.ctags.old
+    cp ~/.ctags ~/.ctags.old
+    rm ~/.ctags
     echo "Moving old ~/.ctags file to ~/ctags.old"
 fi
 echo "Installing new .ctags file"
@@ -24,7 +26,8 @@ folder=$(readlink -f ./ctags)
 ln -s $folder ~/.ctags
 
 if [ -f ~/.bashrc  ]; then
-    mv ~/.bashrc ~/.bashrc.old
+    cp ~/.bashrc ~/.bashrc.old
+    rm ~/.bashrc
     echo "Moving old ~/.bashrc file to ~/bashrc.old"
 fi
 echo "Installing new .bashrc file"
@@ -32,7 +35,8 @@ folder=$(readlink -f ./bashrc)
 ln -s $folder ~/.bashrc
 
 if [ -f ~/.bash_aliases  ]; then
-    mv ~/.bash_aliases ~/.bash_aliases.old
+    cp ~/.bash_aliases ~/.bash_aliases.old
+    rm ~/.bash_aliases
     echo "Moving old ~/.bash_aliases file to ~/bash_aliases.old"
 fi
 echo "Installing new .bash_aliases file"
@@ -40,7 +44,8 @@ folder=$(readlink -f ./bash_aliases)
 ln -s $folder ~/.bash_aliases
 
 if [ -f ~/.bash_commands  ]; then
-    mv ~/.bash_commands ~/.bash_commands.old
+    cp ~/.bash_commands ~/.bash_commands.old
+    rm ~/.bash_commands
     echo "Moving old ~/.bash_commands file to ~/bash_commands.old"
 fi
 echo "Installing new .bash_commands file"
@@ -48,7 +53,8 @@ folder=$(readlink -f ./bash_commands)
 ln -s $folder ~/.bash_commands
 
 if [ -f ~/.flake8  ]; then
-    mv ~/.flake8 ~/.flake8.old
+    cp ~/.flake8 ~/.flake8.old
+    rm ~/.flake8
     echo "Moving old ~/.flake8 file to ~/flake8.old"
 fi
 echo "Installing new .flake8 file"
@@ -57,7 +63,8 @@ ln -s $folder ~/.flake8
 
 
 if [ -f ~/.gitignore_global  ]; then
-    mv ~/.gitignore_global ~/.gitignore_global.old
+    cp ~/.gitignore_global ~/.gitignore_global.old
+    rm ~/.gitignore_global
     echo "Moving old ~/.gitignore_global file to ~/.gitignore_global"
 fi
 
@@ -68,7 +75,8 @@ echo "Installing new .gitignore_global file"
 echo -e "\e[1;31mRun git config --global core.excludesfile ~/.gitignore_global\e[0m";
 
 if [ -f ~/.gitconfig  ]; then
-    mv ~/.gitconfig ~/.gitconfig.old
+    cp ~/.gitconfig ~/.gitconfig.old
+    rm ~/.gitconfig 
     echo "Moving old ~/.gitconfig file to ~/gitconfig.old"
 fi
 echo "Installing new .gitconfig file"
