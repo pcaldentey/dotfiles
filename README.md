@@ -42,3 +42,4 @@ Youcompleteme installation
 - vim-snippets (https://github.com/honza/vim-snippets)
 - vim-trailing-whitespace (https://github.com/bronson/vim-trailing-whitespace)
 - ctrlp (https://github.com/ctrlpvim/ctrlp.vim)
+- easygrep (https://github.com/dkprice/vim-easygrep.git)
