@@ -168,6 +168,14 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" Easygrep
+let g:EasyGrepCommand="grep"
+let g:EasyGrepRoot="repository"
+let g:EasyGrepRecursive = 1
+let g:EasyGrepFilesToExclude = "vendor,docker,node_modules"
+
+" Vim Markdown preview
+let vim_markdown_preview_hotkey='<C-m>'
 
 " vim-php-namespace
 "   add use statements
