@@ -43,6 +43,6 @@ Youcompleteme installation
 - vim-trailing-whitespace (https://github.com/bronson/vim-trailing-whitespace)
 - ctrlp (https://github.com/ctrlpvim/ctrlp.vim)
 - easygrep (https://github.com/dkprice/vim-easygrep.git)
-- markdown (hhttps://github.com/plasticboy/vim-markdow.git)
+- markdown (https://github.com/plasticboy/vim-markdow.git)
 - vim markdown preview (https://github.com/JamshedVesuna/vim-markdown-preview.git)
     - install xdotool and markdown
