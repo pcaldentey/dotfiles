@@ -157,7 +157,7 @@ map <silent> <C-B> :SyntasticReset<CR>
 
 " Youcompleteme
 let g:ycm_key_invoke_completion = '<C-a>'
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<c-j>"
