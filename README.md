@@ -17,7 +17,7 @@ Clone repo
 
 Install dot-files
 
-``` cd ~/vim/dotfiles && ./install.sh ```
+``` cd ~/.vim/dotfiles && ./install.sh ```
 
 
 Youcompleteme installation
