@@ -5,6 +5,7 @@
 --exclude=.svn
 --exclude=.git
 --exclude=log
+--exclude=docs
 --exclude=*.min.js
 --exclude=cache
 --exclude=*.md

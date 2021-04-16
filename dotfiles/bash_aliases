@@ -1,5 +1,6 @@
 alias version='lsb_release -ri'
 alias grpe='grep'
 alias mkae='make'
+alias gti='git'
 alias vagrnat='vagrant'
 
